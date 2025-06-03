@@ -1,1 +1,0 @@
-## Vish pega do git da vara
