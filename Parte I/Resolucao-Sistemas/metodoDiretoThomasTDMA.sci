@@ -1,3 +1,4 @@
+///////Preencher Diagonal
 clear(); clc()
 
 printf("\n * MÉTODO DIRETO: THOMAS (TDMA) SISTEMAS TRIDIAGONAIS *\N")
