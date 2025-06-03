@@ -1,8 +1,6 @@
 clear(); clc()
-printf("*** Gabriel Costa de Moraes ***\n");
 printf("\n **** MÉTODO ITERATIVO: GAUSS-SEIDEL (REORDENAÇÃO GULOSA)****\n")
 //..
-// Dados de 
 
 A = [0.1, 0.2, 1.0, 0.3; 
      0.3, 2.0, -0.3, -0.9; 
