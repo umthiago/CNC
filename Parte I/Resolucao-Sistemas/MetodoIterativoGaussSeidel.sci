@@ -1,14 +1,17 @@
-clear(); clc()
+//..................................................................
+clear(); clc()                                        //Limpa variáveis e console
 printf("\n **** MÉTODO ITERATIVO: GAUSS-SEIDEL (REORDENAÇÃO GULOSA)****\n")
 //..................................................................
-
+// dados de entrada - Matriz dos coeficientes e vetor dos termos indep.
+// EXEMPLO 3.10) - Prática
 A = [0.1, 0.2, 1.0, 0.3; 
      0.3, 2.0, -0.3, -0.9; 
      4.0, 2.0, -0.3, 0.8; 
-     0.6, 3.2, -1.8, 0.4]
+     0.6, 3.2, -1.8, 0.4];
 
-B = [4.0; 7.5; 4.4; 10.0]
-//....................
+B = [4.0; 7.5; 4.4; 10.0];
+
+//..................................................................
 n = size(A, 1);
 Nmax = 100;
 
@@ -29,7 +32,7 @@ disp(B_original);
 function [A_greedy, B_greedy, sucesso, ordem] = reordenar_greedy(A, B)
     n = size(A, 1);
     usados = zeros(n, 1);            // marca as linhas já escolhidas
-    ordem = zeros(n, 1);             // novs ordem de linha
+    ordem = zeros(n, 1);             // nova ordem de linha
     sucesso = %T;
     
     for j = 1:n
@@ -60,18 +63,18 @@ endfunction
 [A, B, sucesso, ordem_linhas] = reordenar_greedy(A, B)
 
 if sucesso then
-    printf("\n Reordenação Gulosa aplicada  com sucesso \n")
-    printf("\n Ordem das linhas escolhidas:")
-    disp(ordem_linhas)  
+    printf("\n Reordenação Gulosa aplicada com sucesso \n")
+    printf("\ Ordem das linhas escolhidas: ")
+    disp(ordem_linhas');
     
     printf("\n Matriz A após reordenação")
-    disp(A)
+    disp(A);
     printf("\n Vetor B após reordenação")
-    disp(B)
+    disp(B);
 else
     error("Não foi possível aplicar a reordenação gulosa")
 end
-
+//Algoritmo de Gauss-Seidel
 for k = 1:Nmax
     for i = 1:n 
         S = 0
@@ -94,6 +97,7 @@ end
 printf("\n Numero de iterações: %d\n", k);
 printf("\n Vetor solucao aproximada: \n");
 mprintf(" x(%d)  = %.6f\n", [(1:n)', X])
+
 //..................................................................
 // Verificação A*X = B
 printf("\n Verificação: A * X = B\n");
@@ -112,4 +116,3 @@ end
 //..................................................................
 printf("\n***** ENCERRAMENTO DO GAUSS-SEIDEL COM MÉTODO GULOSO *****\n");
 //..................................................................
-
