@@ -1,6 +1,6 @@
 clear(); clc()
 printf("\n **** MÉTODO ITERATIVO: GAUSS-SEIDEL (REORDENAÇÃO GULOSA)****\n")
-//..
+//..................................................................
 
 A = [0.1, 0.2, 1.0, 0.3; 
      0.3, 2.0, -0.3, -0.9; 
@@ -17,14 +17,14 @@ X0 = zeros(n, 1);
 X = X0;
 A_original = A;
 B_original = B;
-//..........................................................................
+//..................................................................
 // Exibe os dados originais
 printf("\n Matriz A original:\n"); 
 disp(A_original);
 printf("\n Vetor B original:\n");
 disp(B_original);
 
-//..........................................................................
+//..................................................................
 // Função gulosa: tenta alinhar os maiores coeficientes com a diagonal
 function [A_greedy, B_greedy, sucesso, ordem] = reordenar_greedy(A, B)
     n = size(A, 1);
@@ -55,7 +55,7 @@ function [A_greedy, B_greedy, sucesso, ordem] = reordenar_greedy(A, B)
     A_greedy = A(ordem, :)
     B_greedy = B(ordem)
 endfunction 
-//..
+//..................................................................
 // Aplicação da ordenação gulosa
 [A, B, sucesso, ordem_linhas] = reordenar_greedy(A, B)
 
@@ -89,12 +89,12 @@ for k = 1:Nmax
     end
     X0 = X; 
 end
-//..
+//..................................................................
 // Saída de resultados 
 printf("\n Numero de iterações: %d\n", k);
 printf("\n Vetor solucao aproximada: \n");
 mprintf(" x(%d)  = %.6f\n", [(1:n)', X])
-//..
+//..................................................................
 // Verificação A*X = B
 printf("\n Verificação: A * X = B\n");
 for i = 1:n 
@@ -109,7 +109,7 @@ for i = 1:n
         end
     end
 end
-//.............................................................................
+//..................................................................
 printf("\n***** ENCERRAMENTO DO GAUSS-SEIDEL COM MÉTODO GULOSO *****\n");
-//.........................................................................
+//..................................................................
 
