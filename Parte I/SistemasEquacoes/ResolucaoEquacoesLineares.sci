@@ -4,7 +4,7 @@
 funcprot(0);
 clear(); clc();
 
-//printf("*** RESOLUÇÃO DE SISTEMAS DE EQUAÇÕES LINEARES ***\n")
+printf("*** RESOLUÇÃO DE SISTEMAS DE EQUAÇÕES LINEARES ***\n")
 
 function x = gauss_sem_pivoteamento(A_original, B_original)
     printf("*** MÉTODO DIRETO: GAUSS (ELIMINAÇÃO GAUSSIANA) SEM PIVOTEAMENTO ***\n\n");
@@ -641,11 +641,11 @@ endfunction
 //  m +  c +  a -  s = 7
 // 2m + 3c +  a + 4s = 15
 
-A = [3,  2, -1,  1; 2, -2,  4, -3; 1,  1,  1, -1; 2,  3,  1,  4]
-B = [10; 6; 7; 15]
+//A = [3,  2, -1,  1; 2, -2,  4, -3; 1,  1,  1, -1; 2,  3,  1,  4]
+//B = [10; 6; 7; 15]
 
 //x = gauss_sem_pivoteamento(A,B)
-x = lu_crout(A,B)
+//x = lu_crout(A,B)
 //Métodos iterativos de Gauss-Jacobi e Gauss-Seidel não convergem pois o sistema não possui diagonal dominante, mesmo após a reordenação gulosa. 
 //gauss-seidel não converge porque a matriz não é nem pode se tornar diagonal dominante
 //gauss-jacobi não converge porque a matriz não é nem pode se tornar diagonal dominante
