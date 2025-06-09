@@ -180,4 +180,44 @@ printf("PROBLEMA 2.3\n");
 //O = 5; deff('y = C(d)', 'y = 10 - 20*(exp(-0.2*d) - exp(-0.75*d)) - O');
 printf("PROBLEMA 2.4\n");
 //deff('y = C(d)', 'y = 10 - 20*(exp(-0.2*d) - exp(-0.75*d)) - O');
-//gerarGrafico(C, -2, 10, 0, 5, 1.0, "10 - 20*(exp(-0.2*d) - exp(-0.75*d)) - O");
+//gerarGrafico(C, -2, 10, 0, 5, 1.0, "10 - 20*(exp(-0.2*d) - exp(-0.75*d)) - O");]
+
+Problema 1.1: Obter uma aproximação às raízes das funções:
+fx=x^2-3 no intervalo 1,2, com ϵ=10-6.
+Solução:
+
+1.1 - 1
+1)Fazendo um estudo de sinal no intervalo [-3, 3] ⊂ ℝ obtém-se:
+
+//X
+//-3
+//-2
+//-1
+//0
+//1
+//2
+//3
+//F(X)
+//6
+//1
+//-2
+//-3
+//-2
+//1
+//6
+
+
+//Como nos subintervalos [1, 2] e [-1, -2] a função muda de sinal, eles são candidatos a conter as raízes. 
+
+//2) Plotando a função no intervalo [-3, 3] obtém-se:  
+
+//grafico
+
+//3)Escolhendo o subintervalo [1, 2] para o estudo numérico, para mostrar a existência da raiz neste intervalo deve-se mostrar que 𝐟(1) ⋅ 𝐟(2) < 𝟎, e para mostrar que é única neste subintervalo deve se mostrar que 𝐟𝟏 (1) ⋅ 𝐟𝟏 (2) > 𝟎. Como 𝐟(1) = 12 - 3 = -2 e 𝐟(2) = 22 -3 = 1, de modo que 𝐟(1) ⋅ 𝐟(2) = (-2) ⋅ (1) = −2 < 𝟎. Analogamente, 𝐟𝟏 (1) = 2 ⋅ 1 = 2 e 𝐟𝟏 (2) = 2 ⋅ 2 = 4, de modo que 𝐟𝟏 (1) ⋅ 𝐟𝟏 (2) = (2) ⋅ (4) = 8 > 𝟎. Assim existe uma única raiz no subintervalo escolhido.
+
+//4)Para o subintervalo [1, 2] obtém-se, via métodos de refinamento que
+
+//métodos
+
+
+//5) Como o valor médio das raízes é 1,732051, então 𝐟(1,732051) = 1,7320512 - 3 = 6,66601×10−7 ≈ 𝟎, o que mostra que a solução aproximada é suficientemente boa para os mais diversos propósitos.
